@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 37%;
+  left: 45px;
+  z-index: 2;
+}
+
+.searchS {
+  padding: 10px;
+  width: 300px;
+}
+
+.ant-select-selection-search-input {
+  padding-left: 10px;
+}
