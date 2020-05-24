@@ -1,6 +1,7 @@
 安装sass:cnpm install sass -D
 安装redux,ruout:anzhuangcnpm install redux react-redux react-router-dom --save
 安装antd:npm install antd --save
+卸载ant: remove antd
 安装jsonp：cnpm i fetch-jsonp -S
 
 
@@ -33,3 +34,7 @@ ant-mobile安装以及使用
     import DatePicker from 'antd-mobile/lib/date-picker';  // 加载 JS
     import 'antd-mobile/lib/date-picker/style/css';        // 加载 CSS
     // import 'antd-mobile/lib/date-picker/style';         // 加载 LESS
+
+
+
+    按钮拖动：npm install suspend-button -S

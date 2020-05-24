@@ -3,22 +3,23 @@ import { Select } from 'antd'
 import jsonp from 'fetch-jsonp'
 import querystring from 'querystring'
 import './icons.css'
+import Draggable  from './drag/Draggable'
 
-import { UserOutlined } from '@ant-design/icons'
+// import { UserOutlined } from '@ant-design/icons'
 
 const { Option } = Select
 
 let timeout
 let currentValue
 
-function fetch(value, callback) {
+ let fetch = (value, callback) => {
   if (timeout) {
     clearTimeout(timeout)
     timeout = null
   }
   currentValue = value
 
-  function fake() {
+  let fake = ()=> {
     const str = querystring.encode({
       code: 'utf-8',
       q: value,
@@ -47,6 +48,8 @@ class SearchInput extends React.Component {
   state = {
     data: [],
     value: undefined,
+    pageX: 80,
+    pageY: 70
   }
 
   handleSearch = (value) => {
@@ -61,13 +64,18 @@ class SearchInput extends React.Component {
     this.setState({ value })
   }
 
+    //推拽回调函数
+    setPanelPosition(left,top){
+      this.setState({pageX: left, pageY: top})
+    }
+
   render() {
     const options = this.state.data.map((d) => (
       <Option key={d.value}>{d.text}</Option>
     ))
     return (
       <div>
-        <UserOutlined className="icon" />
+        {/* <UserOutlined className="icon" /> */}
         <Select
           className="searchS"
           showSearch
