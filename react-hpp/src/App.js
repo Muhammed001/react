@@ -6,6 +6,7 @@ import SimpleDatePicker from './components/datepicker/SimpleDatePicker'
 import DntMobileDate from './components/datepicker/antMobileDate'
 import ImagePickerExample from './components/ImagePickerExample/ImagePickerExample '
 import SelectAnt from './components/SelectAnt'
+import SelectInput from './components/selectInput/SelectInput'
 
 function App () {
 
@@ -14,12 +15,13 @@ function App () {
       {/* <SimpleDatePicker></SimpleDatePicker> */}
       {/* <Datepicker></Datepicker> */}
       {/* <DntMobileDate></DntMobileDate> */}
-      <div className = 'selectClass'>
+      {/* <div className = 'selectClass'>
         <SelectAnt></SelectAnt>
       </div>
       <div>
         <ImagePickerExample></ImagePickerExample>
-      </div>
+      </div> */}
+      <SelectInput></SelectInput>
     </div>
   );
 }

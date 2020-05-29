@@ -18,11 +18,12 @@
   padding-left: 10px;
 }
 
-.overFloawDiv {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100px;
-  height: 100px;
-  background: #bbbbbb;
+.t-suspend-button {
+  position: fixed;
+  top: 400px;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #ccc; 
+  box-shadow: 1px 1px 1px #ccc;
 }

@@ -3,7 +3,7 @@ import { Select } from 'antd'
 import jsonp from 'fetch-jsonp'
 import querystring from 'querystring'
 import './icons.css'
-import Draggable  from './drag/Draggable'
+import SuspendButton from 'suspend-button'
 
 // import { UserOutlined } from '@ant-design/icons'
 
@@ -12,14 +12,14 @@ const { Option } = Select
 let timeout
 let currentValue
 
- let fetch = (value, callback) => {
+let fetch = (value, callback) => {
   if (timeout) {
     clearTimeout(timeout)
     timeout = null
   }
   currentValue = value
 
-  let fake = ()=> {
+  let fake = () => {
     const str = querystring.encode({
       code: 'utf-8',
       q: value,
@@ -49,7 +49,7 @@ class SearchInput extends React.Component {
     data: [],
     value: undefined,
     pageX: 80,
-    pageY: 70
+    pageY: 70,
   }
 
   handleSearch = (value) => {
@@ -64,10 +64,14 @@ class SearchInput extends React.Component {
     this.setState({ value })
   }
 
-    //推拽回调函数
-    setPanelPosition(left,top){
-      this.setState({pageX: left, pageY: top})
-    }
+  //推拽回调函数
+  setPanelPosition(left, top) {
+    this.setState({ pageX: left, pageY: top })
+  }
+
+  test = () => {
+    alert(12345);
+  }
 
   render() {
     const options = this.state.data.map((d) => (
@@ -91,6 +95,9 @@ class SearchInput extends React.Component {
         >
           {options}
         </Select>
+        <div>
+          <SuspendButton onClick={this.test} className= 'suspend' style = {{background: '#3885eb'}}>eSpace</SuspendButton>
+        </div>
       </div>
     )
   }
