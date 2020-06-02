@@ -7,6 +7,8 @@ import DntMobileDate from './components/datepicker/antMobileDate'
 import ImagePickerExample from './components/ImagePickerExample/ImagePickerExample '
 import SelectAnt from './components/SelectAnt'
 import SelectInput from './components/selectInput/SelectInput'
+import ImagNv from './components/imgUtils/img';
+import DivCon from './components/divTop/index'
 
 function App () {
 
@@ -21,7 +23,9 @@ function App () {
       <div>
         <ImagePickerExample></ImagePickerExample>
       </div> */}
-      <SelectInput></SelectInput>
+      {/* <SelectInput></SelectInput> */}
+      {/* <ImagNv></ImagNv> */}
+      <DivCon></DivCon>
     </div>
   );
 }

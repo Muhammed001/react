@@ -1,0 +1,120 @@
+.outDiv {
+  padding: 10px 5px 0 5px;
+}
+
+.content {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  padding: 0 10px 17px 10px;
+  background-color: #eeee;
+}
+
+  .entry1 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 13px;
+    width: 130px;
+    background: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    z-index: 10;
+    border: 1px solid red;
+  }
+.entry {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  background: #fff;
+  padding: 10px;
+  /*设置圆角*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*左三角*/
+
+.entry-trangle-left {
+  position: absolute;
+  bottom: 15px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+}
+
+/*右三角*/
+
+.entry-trangle-right {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+}
+
+/*上三角*/
+
+.entry-trangle-top {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fff;
+}
+
+/*下三角*/
+
+.entry-trangle-bottom {
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fff;
+}
+
+.tag-top{
+  margin: 20px;
+  padding: 5px;
+  width:124px;
+  height:30px;
+  border:1px solid red;
+  position:absolute;
+  background-color:#FFF;
+  /*设置圆角*/
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  z-index: 10;
+  color: red;
+}
+
+.tag-top:before,.tag-top:after{
+  content:"";
+  display:block;
+  border-width:15px;
+  position:absolute;
+  top:-30px;
+  left:26px;
+  border-style:solid dashed dashed solid;
+  border-color:transparent  transparent red transparent;
+  font-size:0;
+  line-height:0;
+}
+
+.tag-top:after{
+  top:-27px;
+  border-color: transparent transparent #FFF transparent;
+}
